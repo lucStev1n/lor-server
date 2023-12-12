@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cs.jou.infrastructure.mapper.AwardMapper">
+
+    <resultMap id="BaseResultMap" type="cs.jou.infrastructure.pojo.Award">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="awardid" column="awardId" jdbcType="BIGINT"/>
+            <result property="awardtype" column="awardType" jdbcType="INTEGER"/>
+            <result property="awardcount" column="awardCount" jdbcType="INTEGER"/>
+            <result property="awardname" column="awardName" jdbcType="VARCHAR"/>
+            <result property="awardcontent" column="awardContent" jdbcType="VARCHAR"/>
+            <result property="createtime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updatetime" column="updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,awardId,awardType,
+        awardCount,awardName,awardContent,
+        createTime,updateTime
+    </sql>
+</mapper>

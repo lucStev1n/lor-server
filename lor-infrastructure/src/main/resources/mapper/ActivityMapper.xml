@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cs.jou.infrastructure.mapper.ActivityMapper">
+
+    <resultMap id="BaseResultMap" type="cs.jou.infrastructure.pojo.Activity">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="activityid" column="activityId" jdbcType="BIGINT"/>
+            <result property="activityname" column="activityName" jdbcType="VARCHAR"/>
+            <result property="activitydesc" column="activityDesc" jdbcType="VARCHAR"/>
+            <result property="begindatetime" column="beginDateTime" jdbcType="TIMESTAMP"/>
+            <result property="enddatetime" column="endDateTime" jdbcType="TIMESTAMP"/>
+            <result property="stockcount" column="stockCount" jdbcType="INTEGER"/>
+            <result property="takecount" column="takeCount" jdbcType="INTEGER"/>
+            <result property="state" column="state" jdbcType="INTEGER"/>
+            <result property="creator" column="creator" jdbcType="VARCHAR"/>
+            <result property="createtime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updatetime" column="updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,activityId,activityName,
+        activityDesc,beginDateTime,endDateTime,
+        stockCount,takeCount,state,
+        creator,createTime,updateTime
+    </sql>
+</mapper>
